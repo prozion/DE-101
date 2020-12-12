@@ -1,0 +1,22 @@
+system
+	source type:tier
+		Sales
+		Google_Analytics
+		Warehouse
+		CRM
+	storage type:tier
+		Data_storage extracts-data-from:Sales,Google_Analytics,Warehouse,CRM provides-data-to:SQL,Excel,BI
+			Staging
+			Business_Layer
+	business type:tier
+		SQL
+		Excel
+		BI deabbr:"Business Intelligence"
+	User
+scenarios
+	User uses:SQL
+	User uses:Excel
+	User uses:BI
+	not_optimal_scenario
+		BI extracts-from:Warehouse 
+		User uses:BI

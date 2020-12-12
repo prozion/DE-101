@@ -1,0 +1,16 @@
+system actual-time:07.2013-02.2014
+	source type:tier
+		Отдел_продаж data-container:Inhouse_CRM
+		Производство data-container:Excel
+		Склад data-container:Excel,1C
+	storage type:tier
+		Inhouse_ERP takes-data-from:Производство,Склад provides-data-to:Веб-интерфейс
+			Inhouse_CRM developer:Александр_Мельников
+			Сервер os:Linux server:Apache programming-environment:PHP database:База_данных developer:Александр_Мельников,Денис_Ширшов
+			База_данных database-management-system:MySQL
+	business type:tier
+		Веб-интерфейс gui:Bootstrap,Angular1 developer:Денис_Ширшов
+		Менеджер_по_продажам
+		Директор_компании person:Иван_Демидов
+		Начальник_производства person:Николай_Ничушкин
+		Менеджер_по_маркетингу
